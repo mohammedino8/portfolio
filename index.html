@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Fikri Mohammed Amine</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #0a0c10;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #111319;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #1e2128;
+    }
+
+    header h1 {
+      color: #00bcd4;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: #ddd;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    section {
+      padding: 100px 60px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #hero {
+      background: linear-gradient(135deg, #0a0c10 40%, #00bcd41a);
+      padding-top: 120px;
+      padding-bottom: 140px;
+    }
+
+    #hero h2 {
+      font-size: 2.8rem;
+      color: #00bcd4;
+      margin-bottom: 15px;
+    }
+
+    #hero p {
+      color: #bbb;
+      font-size: 1.2rem;
+    }
+
+    #about h2,
+    #skills h2,
+    #projects h2,
+    #contact h2 {
+      color: #00bcd4;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .skill {
+      background: #111319;
+      padding: 25px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-6px);
+    }
+
+    #projects .project {
+      background: #111319;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .project h3 {
+      color: #00bcd4;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .project a {
+      display: inline-block;
+      background: #00bcd4;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .project a:hover {
+      background: #0097a7;
+    }
+
+    #contact {
+      background: #0f1116;
+      border-top: 1px solid #1b1e25;
+      border-bottom: 1px solid #1b1e25;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: #111319;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 8px;
+      color: #eee;
+      font-size: 1rem;
+      resize: none;
+    }
+
+    .contact-form button {
+      background: #00bcd4;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #0097a7;
+    }
+
+    footer {
+      background: #111319;
+      color: #ccc;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.95rem;
+      margin-top: 60px;
+      border-top: 1px solid #1c1f26;
+    }
+
+    footer a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fikri Mohammed Amine</h1>
+    <nav>
+      <a href="#hero">Accueil</a>
+      <a href="#about">À propos</a>
+      <a href="#skills">Compétences</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Bienvenue sur mon portfolio</h2>
+    <p>Développeur web passionné, créatif et toujours prêt à apprendre de nouvelles technologies.</p>
+  </section>
+
+  <section id="about">
+    <h2>À propos</h2>
+    <p>
+      Je suis <strong>Fikri Mohammed Amine</strong>, un développeur web qui aime créer des interfaces modernes et élégantes.
+      Mon objectif est de transformer les idées en projets concrets, avec un design soigné et une expérience fluide.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Compétences</h2>
+    <div class="skills-grid">
+      <div class="skill">HTML / CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">Git / GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projets</h2>
+    <div class="project">
+      <h3>🎮 Games Shop</h3>
+      <p>Une plateforme moderne pour explorer et acheter des jeux vidéo.</p>
+      <a href="#">Voir le projet</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contactez-moi</h2>
+    <p>Envoyez-moi un message, je vous répondrai rapidement.</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Votre nom" required />
+      <input type="email" placeholder="Votre email" required />
+      <textarea rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>📧 Email : <a href="mailto:fikrimohammed024@gmail.com">fikrimohammed024@gmail.com</a></p>
+    <p>📞 Téléphone : 07012090</p>
+    <p>© 2025 Fikri Mohammed Amine — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
